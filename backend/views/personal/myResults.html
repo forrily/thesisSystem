@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>论文在线选题系统</title>
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+  <!-- CSS Libs -->
+  <link rel="stylesheet" type="text/css" href="/lib/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/lib/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/lib/css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="/lib/css/bootstrap-switch.min.css">
+  <link rel="stylesheet" type="text/css" href="/lib/css/checkbox3.min.css">
+  <link rel="stylesheet" type="text/css" href="/lib/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="/lib/css/dataTables.bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/lib/css/select2.min.css">
+  <!-- CSS App -->
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/themes/flat-blue.css">
+</head>
+
+<body class="flat-blue">
+  <div class="app-container">
+    <div class="row content-container">
+      <nav class="navbar navbar-default navbar-fixed-top navbar-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-expand-toggle">
+              <i class="fa fa-bars icon"></i>
+            </button>
+            <ol class="breadcrumb navbar-breadcrumb">
+              <li>个人中心</li>
+              <li class="active">查看成绩</li>
+            </ol>
+            <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+              <i class="fa fa-th icon"></i>
+            </button>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+              <i class="fa fa-times icon"></i>
+            </button>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <i class="fa fa-comments-o"></i>
+              </a>
+              <ul class="dropdown-menu animated fadeInDown">
+                <li class="title">
+                  Notification
+                  <span class="badge pull-right">0</span>
+                </li>
+                <li class="message">
+                  No new notification
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown danger">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <i class="fa fa-star-half-o"></i> 4</a>
+              <ul class="dropdown-menu danger  animated fadeInDown">
+                <li class="title">
+                  Notification
+                  <span class="badge pull-right">4</span>
+                </li>
+                <li>
+                  <ul class="list-group notifications">
+                    <a href="#">
+                      <li class="list-group-item">
+                        <span class="badge">1</span>
+                        <i class="fa fa-exclamation-circle icon"></i> new registration
+                      </li>
+                    </a>
+                    <a href="#">
+                      <li class="list-group-item">
+                        <span class="badge success">1</span>
+                        <i class="fa fa-check icon"></i> new orders
+                      </li>
+                    </a>
+                    <a href="#">
+                      <li class="list-group-item">
+                        <span class="badge danger">2</span>
+                        <i class="fa fa-comments icon"></i> customers messages
+                      </li>
+                    </a>
+                    <a href="#">
+                      <li class="list-group-item message">
+                        view all
+                      </li>
+                    </a>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown profile">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Emily Hart
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu animated fadeInDown">
+                <li class="profile-img">
+                  <img src="/img/profile/picjumbo.com_HNCK4153_resize.jpg" class="profile-img">
+                </li>
+                <li>
+                  <div class="profile-info">
+                    <h4 class="username">张良峰</h4>
+                    <p>学号：2014103040429</p>
+                    <div class="btn-group margin-bottom-2x" role="group">
+                      <button type="button" class="btn btn-default">
+                        <i class="fa fa-user"></i> Profile</button>
+                      <button type="button" class="btn btn-default">
+                        <i class="fa fa-sign-out"></i> Logout</button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- left nav -->
+      <div class="side-menu sidebar-inverse">
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="side-menu-container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">
+                <div class="icon fa fa-paper-plane"></div>
+                <div class="title">Selection System</div>
+              </a>
+              <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                <i class="fa fa-times icon"></i>
+              </button>
+            </div>
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="/index">
+                  <span class="icon fa fa-tachometer"></span>
+                  <span class="title">主页</span>
+                </a>
+              </li>
+              <!-- Dropdown level 1 -->
+              <li class="active panel panel-default dropdown">
+                <a data-toggle="collapse" href="#dropdown-element">
+                  <span class="icon fa fa-desktop"></span>
+                  <span class="title">个人中心</span>
+                </a>
+                <div id="dropdown-element" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul class="nav navbar-nav">
+                      <li>                        
+                        <a href="/personal/personalInfo">个人资料</a>
+                      </li>
+                      <li>
+                        <a href="/personal/myResults">查查成绩</a>
+                      </li>
+                      <li>
+                        <a href="/personal/help">帮助页面</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <!-- Dropdown level 2 -->
+              <li class="panel panel-default dropdown">
+                <a data-toggle="collapse" href="#dropdown-table">
+                  <span class="icon fa fa-table"></span>
+                  <span class="title">选题管理</span>
+                </a>
+                <div id="dropdown-table" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul class="nav navbar-nav">
+                      <li>
+                        <a href="/selectManagement/myElective">我的选题</a>
+                      </li>
+                      <li>
+                        <a href="/selectManagement/allElective">所有选题</a>
+                      </li>
+                      <li>
+                        <a href="/selectManagement/selectedElective">已选课题</a>
+                      </li>
+                      <li>
+                        <a href="/selectManagement/unSelectedElective">未选课题</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <!-- Dropdown level 3 -->
+
+              <li class="panel panel-default dropdown">
+                <a data-toggle="collapse" href="#dropdown-form">
+                  <span class="icon fa fa-file-text-o"></span>
+                  <span class="title">论文管理</span>
+                </a>
+                <div id="dropdown-form" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul class="nav navbar-nav">
+                      <li>
+                        <a href="/paperManagement/task">任务书</a>
+                      </li>
+                      <li>
+                        <a href="/paperManagement/openingReport">开题报告</a>
+                      </li>
+                      <li>
+                        <a href="/paperManagement/midInspection">中期检查</a>
+                      </li>
+                      <li>
+                        <a href="/paperManagement/paperReview">论文查重</a>
+                      </li>
+                      <li>
+                        <a href="/paperManagement/paperSubmit">论文提交</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <!-- Dropdown level 4 -->
+              <li>
+                <a href="/teacherQuery">
+                  <span class="icon fa fa-cubes"></span>
+                  <span class="title">教师查询</span>
+                </a>
+              </li>
+              <!-- Dropdown level 5 -->
+              <li>
+                <a href="/log">
+                  <span class="icon fa fa-slack"></span>
+                  <span class="title">登陆日志</span>
+                </a>
+              </li>
+              <!-- Dropdown level 6 -->
+              <li>
+                <a href="/license">
+                  <span class="icon fa fa-thumbs-o-up"></span>
+                  <span class="title">留言建议</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </nav>
+      </div>
+      <!-- 以上是导航 -->
+      
+      <!-- 这里是页面body -->
+      <div class="container-fluid">
+        <div class="side-body">
+          <div class="page-title">
+            <span class="title">我的选题</span>
+            <div class="description">此页展示我的选题详细信息</div>
+          </div>
+          <!-- 基础个人信息  -->
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">
+                    <div class="title">课题基本信息</div>
+                  </div>
+                </div>
+                <div class="card-body no-padding">
+                  <div class="step tabs-left card-no-padding">
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li role="step" class="active">
+                        <a href="#stepv1" id="step1-vtab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">
+                          <div class="icon fa fa-toggle-on"></div>
+                          <div class="step-title">
+                            <div class="title">课题详情</div>
+                            <div class="description"></div>
+                          </div>
+                        </a>
+                      </li>
+                      <li role="step">
+                        <a href="#stepv2" role="tab" id="step2-vtab" data-toggle="tab" aria-controls="profile">
+                          <div class="icon fa fa-mortar-board"></div>
+                          <div class="step-title">
+                            <div class="title">学生详情</div>
+                            <div class="description"></div>
+                          </div>
+                        </a>
+                      </li>
+                      <li role="step">
+                        <a href="#stepv3" role="tab" id="step3-vtab" data-toggle="tab" aria-controls="profile">
+                          <div class="icon fa fa-paw"></div>
+                          <div class="step-title">
+                            <div class="title">导师详情</div>
+                            <div class="description"></div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane fade in active" id="stepv1" aria-labelledby="home-tab">
+                        <p>题目来源: 导师上传</p>
+                        <p>题目类型：javascript</p>
+                        <p>选题模式：学生选择提交</p>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="stepv2" aria-labelledby="profile-tab">
+                        <p>学生姓名：张良峰</p>
+                        <p>所属专业：计算机科学与技术</p>
+                        <p>所属院校：计算机系</p>
+                        <p>邮箱地址：email@email.com</p>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="stepv3" aria-labelledby="dropdown1-tab">
+                        <p>导师姓名：nickName</p>
+                        <p>导师职称：教授</p>
+                        <p>所属院校：计算机系</p>
+                        <p>联系电话：131-2345-6798</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- 论文选题信息 -->
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">
+                    <div class="title">论文在线选题系统</div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">摘要</div>
+                    <div class="panel-body">
+                      <p>&nbsp;&nbsp;&nbsp;&nbsp;本文主要介绍了毕业论文在线选题系统的设计与开发过程，本系统使用了目前较为主流的NodeJS-Express作为后台开发的框架，数据库选用MySQL数据库，前端界面则采用HTML+CSS实现页面架构，使用VSCode与MySQL-Front作为开发工具，整个开发过程中使用到的语言有javascript、html和mysql等知识。主要实现了导师上传毕业论文课题供学生选择，学生在线选择毕业论文课题。页面模块划分导师界面和学生界面。</p>
+                    </div>
+                    <!-- Table -->
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>课题名称</th>
+                          <th>研究方向</th>
+                          <th>指导老师</th>
+                          <th>状态</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">论文在线选题系统</th>
+                          <td>javascript</td>
+                          <td>nickName</td>
+                          <td>审核成功</td>
+                        </tr>
+                        <!-- <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Larry</td>
+                          <td>the Bird</td>
+                          <td>@twitter</td>
+                        </tr> -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="app-footer">
+        <div class="wrapper">
+          <span class="pull-right">2.1
+            <a href="#">
+              <i class="fa fa-long-arrow-up"></i>
+            </a>
+          </span> © 2018 Copyright.
+        </div>
+      </footer>
+  </div>
+
+
+
+  <!-- Javascript Libs -->
+  <script type="text/javascript" src="/lib/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/lib/js/Chart.min.js"></script>
+  <script type="text/javascript" src="/lib/js/bootstrap-switch.min.js"></script>
+
+  <script type="text/javascript" src="/lib/js/jquery.matchHeight-min.js"></script>
+  <script type="text/javascript" src="/lib/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="/lib/js/dataTables.bootstrap.min.js"></script>
+  <script type="text/javascript" src="/lib/js/select2.full.min.js"></script>
+  <script type="text/javascript" src="/lib/js/ace/ace.js"></script>
+  <script type="text/javascript" src="/lib/js/ace/mode-html.js"></script>
+  <script type="text/javascript" src="/lib/js/ace/theme-github.js"></script>
+  <!-- Javascript -->
+  <script type="text/javascript" src="/js/app.js"></script>
+</body>
+
+</html>

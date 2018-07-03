@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "description": "",
+  "main": "",
+  "authors": [
+    "forrily <forrily@126.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

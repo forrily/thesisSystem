@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "bower": "./node_modules/.bin/bower",
+    "supervisor":"./node_modules/.bin/supervisor"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "^2.6.1",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "mysql": "^2.15.0",
+    "supervisor": "^0.12.0"
+  },
+  "devDependencies": {
+    "bower": "^1.8.4",
+    "layer": "^0.1.0"
+  }
+}
